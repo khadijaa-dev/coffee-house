@@ -1,0 +1,325 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial;
+  scroll-behavior:smooth;
+}
+
+body{
+  background:#111;
+  color:white;
+}
+
+/* NAVBAR */
+
+.navbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 50px;
+  background:#1c1c1c;
+  position:fixed;
+  width:100%;
+  z-index:1000;
+}
+
+.logo{
+  color:#c59d5f;
+}
+
+.nav-links{
+  display:flex;
+  list-style:none;
+  gap:25px;
+}
+
+.nav-links a{
+  text-decoration:none;
+  color:white;
+  transition:0.3s;
+}
+
+.nav-links a:hover{
+  color:#c59d5f;
+}
+
+/* HERO */
+
+.hero{
+  height:100vh;
+  background:
+  linear-gradient(rgba(0,0,0,0.5),
+  rgba(0,0,0,0.5)),
+  url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=1600');
+
+  background-size:cover;
+  background-position:center;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+}
+
+.hero-content{
+  max-width:700px;backdrop-filter: blur(5px);
+box-shadow:0 5px 30px rgba(0,0,0,0.7);
+
+}
+
+.hero h2{
+  font-size:70px;
+  margin-bottom:20px;
+}
+
+.hero p{
+  font-size:20px;
+  margin-bottom:30px;
+}
+
+.hero button{
+  padding:15px 35px;
+  border:none;
+  background:#c59d5f;
+  color:white;
+  border-radius:10px;
+  font-size:18px;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.hero button:hover{
+  background:white;
+  color:black;
+}
+
+/* ABOUT */
+
+.about{
+  padding:100px 50px;
+  text-align:center;
+}
+
+.about h2{
+  font-size:40px;
+  margin-bottom:20px;
+  color:#c59d5f;
+}
+
+.about p{
+  font-size:18px;
+  line-height:1.8;
+}
+
+/* MENU */
+
+.menu{
+  padding:100px 50px;
+  background:#1b1b1b;
+}
+
+.menu h2{
+  text-align:center;
+  font-size:40px;
+  margin-bottom:50px;
+  color:#c59d5f;
+}
+
+.menu-container{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:30px;
+}
+
+.card{
+  background:#222;
+  border-radius:20px;
+  overflow:hidden;
+  transition:0.3s;
+  box-shadow:0 5px 15px rgba(0,0,0,0.5);
+  
+  animation: fadeIn 1s ease;
+
+
+}
+
+.card:hover{
+  transform:translateY(-15px)
+  scale(1.03);
+
+}
+
+.card img{
+  width:100%;
+  height:250px;
+  object-fit:cover;
+}
+
+.card h3{
+  padding:15px;
+}
+
+.card p{
+  padding:0 15px 20px;
+  color:#c59d5f;
+}
+
+/* GALLERY */
+
+.gallery{
+  padding:100px 50px;
+}
+
+.gallery h2{
+  text-align:center;
+  font-size:40px;
+  margin-bottom:40px;
+  color:#c59d5f;
+}
+
+.gallery-container{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:20px;
+}
+
+.gallery-container img{
+  width:100%;
+  border-radius:20px;
+  height:300px;
+  object-fit:cover;
+  transition:0.3s;
+}
+
+.gallery-container img:hover{
+  transform:scale(1.08);
+  filter:brightness(70%);
+}
+
+/* CONTACT */
+
+.contact{
+  padding:100px 50px;
+  background:#1b1b1b;
+}
+
+.contact h2{
+  text-align:center;
+  margin-bottom:40px;
+  font-size:40px;
+  color:#c59d5f;
+}
+
+form{
+  max-width:600px;
+  margin:auto;
+
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+}
+
+input,
+textarea{
+  padding:15px;
+  border:none;
+  border-radius:10px;
+  outline:none;
+}
+
+textarea{
+  height:150px;
+}
+
+form button{
+  padding:15px;
+  border:none;
+  background:#c59d5f;
+  color:white;
+  border-radius:10px;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+form button:hover{
+  background:white;
+  color:black;
+}
+
+/* FOOTER */
+
+footer{
+  padding:30px;
+  text-align:center;
+  background:black;
+}
+
+.icons{
+  margin-top:15px;
+}
+
+.icons i{
+  margin:0 10px;
+  font-size:25px;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.icons i:hover{
+  color:#c59d5f;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+  .navbar{
+    flex-direction:column;
+    gap:15px;
+  }
+
+  .nav-links{
+    flex-direction:column;
+    text-align:center;
+  }
+
+  .hero h2{
+    font-size:40px;
+  }
+
+  .hero p{
+    font-size:16px;
+  }
+
+}@keyframes fadeIn{
+
+  from{
+    opacity:0;
+    transform:translateY(30px);
+  }
+
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+
+}
+
+.card, .about, .gallery img{
+  opacity:0;
+  transform:translateY(50px);
+}#loader{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100vh;
+  background:#111;
+  color:white;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-size:30px;
+  z-index:9999;
+}
