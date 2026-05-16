@@ -28,7 +28,7 @@ Created by: Khadija Ataimin
 ---
 
 ## 📸 Preview
-![screenshot](screenshot.png)
-![preview](preview.png)
-![coffee1](coffee1.png)
-![majo](majo.png)
+![screenshot](coffee-image/screenshot.png)
+![preview](coffee-image/preview.png)
+![coffee1](coffee-image/coffee1.png)
+![majo](coffee-image/majo.png)
