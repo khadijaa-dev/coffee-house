@@ -23,9 +23,12 @@ It includes a menu, gallery, contact form, and responsive design.
 ---
 
 ## 👩‍💻 Author
-Created by: [Your Name]
+Created by: Khadija Ataimin
 
 ---
 
 ## 📸 Preview
-(Add screenshot of your website here)
+![screenshot](screenshot.png)
+![preview](preview.png)
+![coffee1](coffee1.png)
+![majo](majo.png)
